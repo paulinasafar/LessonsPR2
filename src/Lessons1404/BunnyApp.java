@@ -11,7 +11,7 @@ public class BunnyApp {
         System.out.println();
         System.out.println(Arrays.deepToString(Seasons.values()));
         System.out.println();
-//        bugs.setName("Bunny2");
+        bugs.setName("Bunny2");
 //        System.out.println(bugs.getName());
 //        bugs.setFavoriteFood("ananas cake");
 //        System.out.println(bugs.getFavoriteFood());

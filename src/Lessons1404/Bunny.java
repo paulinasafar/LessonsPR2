@@ -9,7 +9,7 @@ public class Bunny {
 
 
     //if we write at least one construtor, the default constructor no longer exists
-    //this is a construktor without parameter
+    //this is a constructor without parameter
     //public Bunny() {
     //    favoriteFood = "carrots";
     //}
