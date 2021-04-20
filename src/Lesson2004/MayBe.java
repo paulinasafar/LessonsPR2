@@ -1,20 +1,20 @@
 package Lesson2004;
 
-public class MayBeInt {
+public class MayBe<T> {
 
-    private int data;
+    private T data;
     private int status;
 
-    public MayBeInt(int data, int status) {
+    public MayBe(T data, int status) {
         this.data = data;
         this.status = status;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
