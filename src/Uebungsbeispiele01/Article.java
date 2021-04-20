@@ -12,40 +12,31 @@ public class Article {
         this.price = price;
     }
 
-        public String getName(){
-            return name;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setName(String name) {
-            if (name != null) {
-                this.name = name;
-                toString();
-            }
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public int getNumber() {
+        return number;
+    }
 
-    public double findMostExpensiveArticle(Article[] articles) {
-        double highestPrice = articles[0].price;
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
-        for (int i = 0; i < articles.length-1; i++) {
-                if(articles[i].price < articles[i+1].price) {
-                    highestPrice = articles[i+1].price;
-                }
-            }
-        return highestPrice + 1;}
+    public double getPrice() {
+        return price;
+    }
 
-//    public double findMostExpensiveOrderPosition(Article[] articles) {
-//            double mostExpensive = articles[0].number * articles[0].price;
-//        for (int i = 0; i < articles.length; i++) {
-//            if((articles[i].number * articles[i].price) < (articles[i].number * articles[i].price) )
-//        }
-//
-//
-//    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
-
-
-        @Override
+    @Override
     public String toString() {
         return "Article " + name + " with number"  + number + " and price: " + price;
         }

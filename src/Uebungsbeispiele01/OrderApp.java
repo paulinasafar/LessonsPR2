@@ -11,9 +11,16 @@ public class OrderApp {
         Article e = new Article("Physallis", 5, 2.68);
         Article f = new Article("Ananas", 6, 2.98);
         Article g = new Article("Erdbeere", 7, 3.85);
+        Article h = new Article("Brot", 8, 4.23);
+        Article i = new Article("Milch", 9, 1.18);
+        Article j = new Article("Käse", 10, 5.15);
 
         System.out.println(a.getName());
         a.setName("Himbeere");
+
+        Order o1 = new Order(5, 5);
+        Order o2 = new Order(2, 6);
+        Order o3 = new Order(6, 10);
 
 
 
