@@ -57,7 +57,20 @@ public class WaterLevelManager {
         }
     return wl2;}
 
-    //public double calcAverageWaterLevel(String bodyWaterName, String place) {}
+    public double calcAverageWaterLevel(String bodyWaterName, String place) {
+        double average = 0;
+        double sum = 0;
+        int counter = 0;
+
+        for (int i = 0; i < waterlevel.size(); i++) {
+            if(waterlevel.get(i).getBodyWaterName().equals(bodyWaterName) && waterlevel.get(i).getPlace().equals(place)) {
+                sum = sum + waterlevel.get(i).getMeasurement();
+                counter++;
+            }
+        }
+        average = sum / counter;
+    return average;
+    }
 
 
 }
