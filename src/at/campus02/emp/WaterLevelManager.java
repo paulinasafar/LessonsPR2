@@ -72,5 +72,10 @@ public class WaterLevelManager {
     return average;
     }
 
+//    public ArrayList<WaterLevel> findByTime(int von, int bis, String bodyWaterName, String place) {
+//
+//
+//    }
+
 
 }
