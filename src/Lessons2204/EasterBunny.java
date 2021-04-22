@@ -6,8 +6,8 @@ public class EasterBunny extends Rabbit {
         super(name);
     }
 
-    public void hidesGifts(int howManyGifts) {
-        System.out.println("The EasterBunny hid " + howManyGifts + " gifts.");
+    public void hidesEggs(int howManyEggs) {
+        System.out.println("The EasterBunny hid " + howManyEggs + " gifts.");
     }
     @Override
     public void hopp(int howMany) {
