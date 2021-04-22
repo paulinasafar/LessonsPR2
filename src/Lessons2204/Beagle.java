@@ -8,12 +8,15 @@ public class Beagle extends Dog{
         favoriteFood = fF;
     }
 
+    public void jump(int height) {
+        System.out.println("Beagle jumps " + height + " cm high.");
+    }
+
     @Override
     public String toString() {
-        return "Beagle{" +
-                "favoriteFood='" + favoriteFood + '\'' +
-                ", eyeColor='" + eyeColor + '\'' +
-                ", weight=" + weight +
-                '}';
+        return "Beagle: " +
+                "favoriteFood: "+ favoriteFood + '\'' +
+                ", eyeColor: " + eyeColor + '\'' +
+                ", weight: " + weight;
     }
 }

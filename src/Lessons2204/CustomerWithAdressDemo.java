@@ -5,8 +5,8 @@ public class CustomerWithAdressDemo {
     public static void main(String[] args) {
 
 
-        Customer cust1 = new Customer(1);
-        Customer cust2 = new Customer(2);
+        Customer cust1 = new Customer(1,"Franzl", "Weissi" );
+        Customer cust2 = new Customer(2, "Martina", "Schwarzi");
 
 
         Address add1 = new Address("Strasse1", "8112", "Graz", "Österreich");
@@ -23,10 +23,10 @@ public class CustomerWithAdressDemo {
         System.out.println();
         cust1.firstName = "Franzl";
         cust1.lastName = "Weissi";
-        System.out.println();
         cust2.firstName = "Martina";
         cust2.lastName = "Schwarzi";
         System.out.println();
+
         System.out.println(cust1);
         System.out.println(cust2);
 

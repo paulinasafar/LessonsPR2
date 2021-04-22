@@ -7,7 +7,10 @@ public class Customer extends Person{
     private int customerNr;
     private ArrayList<Address> addresses;
 
-    public Customer(int customerNr) {
+    public Customer(int customerNr, String fName, String lName) {
+
+        super(fName, lName);
+        //super("Hansi", "Hinterseer");  schlechte Lösung
         this.customerNr = customerNr;
         this.addresses = new ArrayList<>();
     }
@@ -35,12 +38,10 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "First Name='" + firstName + '\'' +
-                ", Last Name='" + lastName + '\'' +
-                ", customerNr=" + customerNr +
-                ", addresses=" + addresses +
-                '}';
+        return "Customer: " + customerNr + " " +
+                  firstName + " " +
+                 lastName + "\n" + " " +
+                 addresses;
     }
 }
 
