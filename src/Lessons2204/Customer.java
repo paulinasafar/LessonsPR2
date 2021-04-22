@@ -2,7 +2,7 @@ package Lessons2204;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer extends Person{
 
     private int customerNr;
     private ArrayList<Address> addresses;
@@ -36,8 +36,11 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "customerNr=" + customerNr +
+                "First Name='" + firstName + '\'' +
+                ", Last Name='" + lastName + '\'' +
+                ", customerNr=" + customerNr +
                 ", addresses=" + addresses +
                 '}';
     }
 }
+

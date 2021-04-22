@@ -59,9 +59,10 @@ public class Property {
     // -> liefer fals zurück wenn es Lender nicht gibt ODER wenn wir mehr Geld zurück zahlen als noch schuldig sing (dann nichts abziehen)
 
     public boolean payback(String lender, double amount) {
+            Double money = moneyOwed.get(lender);
 
-        if (moneyOwed.containsKey(lender) && moneyOwed.get(lender) > amount) {
-            moneyOwed.put(lender, moneyOwed.get(lender) - amount);
+        if (money != null && money >= amount) {
+            moneyOwed.put(lender, money - amount);
             return true;
         }
         else {

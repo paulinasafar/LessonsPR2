@@ -20,6 +20,17 @@ public class CustomerWithAdressDemo {
         System.out.println(cust1);
         System.out.println(cust2);
 
+        System.out.println();
+        cust1.firstName = "Franzl";
+        cust1.lastName = "Weissi";
+        System.out.println();
+        cust2.firstName = "Martina";
+        cust2.lastName = "Schwarzi";
+        System.out.println();
+        System.out.println(cust1);
+        System.out.println(cust2);
+
+
     }
 
 }

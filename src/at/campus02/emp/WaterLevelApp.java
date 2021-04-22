@@ -29,5 +29,9 @@ public class WaterLevelApp {
         System.out.println("Lake, time: " + wlm.findLastWaterLevel("Lake"));
         System.out.println();
         System.out.println("Average depth: " + wlm.calcAverageWaterLevel("River", "Brasil"));
+
+        System.out.println();
+        System.out.println("Find by time: " + wlm.findByTime(0, 100000, "Sea", "Kroatien"));
+
     }
 }

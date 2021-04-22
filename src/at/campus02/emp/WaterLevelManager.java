@@ -72,10 +72,16 @@ public class WaterLevelManager {
     return average;
     }
 
-//    public ArrayList<WaterLevel> findByTime(int von, int bis, String bodyWaterName, String place) {
-//
-//
-//    }
+    public ArrayList<WaterLevel> findByTime(int von, int bis, String bodyWaterName, String place) {
+
+        ArrayList<WaterLevel> al = new ArrayList<WaterLevel>();
+
+        for(WaterLevel elm : waterlevel) {
+        if(elm.getTime() > von && elm.getTime() < bis && elm.getBodyWaterName().equals(bodyWaterName) && elm.getPlace().equals(place)) {
+        al.add(elm);
+            }
+        }
+    return al;}
 
 
 }
