@@ -10,6 +10,9 @@ public class WaterLevelApp {
         WaterLevel wl4 = new WaterLevel(4,"River", "Italy", 234.87, 234.87, 250);
         WaterLevel wl5 = new WaterLevel(5,"River", "Brasil", 934.55, 800.00, 456);
         WaterLevel wl6 = new WaterLevel(6,"River", "Brasil", 5934.55, 5000.00, 456);
+        WaterLevel wl7 = new WaterLevel(6,"Lake", "Österreich", 1034.55, 5000.00, 1236);
+        WaterLevel wl8 = new WaterLevel(6,"Sea", "Kroatien", 5134.55, 5000.00, 5156);
+        WaterLevel wl9 = new WaterLevel(6,"River", "Brasil", 2934.55, 5000.00, 1256);
 
         WaterLevelManager wlm = new WaterLevelManager();
 
@@ -31,7 +34,7 @@ public class WaterLevelApp {
         System.out.println("Average depth: " + wlm.calcAverageWaterLevel("River", "Brasil"));
 
         System.out.println();
-        System.out.println("Find by time: " + wlm.findByTime(0, 100000, "Sea", "Kroatien"));
+        System.out.println("Find by time: " + wlm.findByTime(10000, 20000, "Sea", "Kroatien"));
 
     }
 }
