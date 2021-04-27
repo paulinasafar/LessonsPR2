@@ -18,6 +18,8 @@ public class RabbitApp {
 
         Rabbit rabbit = easterBunny;
         rabbit.hopp(10);
+        System.out.println(rabbit);
+
 
 
 

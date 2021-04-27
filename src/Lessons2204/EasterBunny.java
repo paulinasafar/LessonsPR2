@@ -4,6 +4,8 @@ public class EasterBunny extends Rabbit {
 
     public EasterBunny(String name) {
         super(name);
+        hopp(1); // would call my own hopp method in line 14
+        super.hopp(1); // would call implementation in base class (Rabbit)
     }
 
     public void hidesEggs(int howManyEggs) {
