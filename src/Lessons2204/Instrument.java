@@ -1,17 +1,27 @@
 package Lessons2204;
 
-public class Instrument {
+public abstract class Instrument {
 
-    public int loudness;
+    protected int loudness;
 
     public Instrument(int loudness) {
         this.loudness = loudness;
     }
-    public int play() {
-        System.out.println("Instruments playing at ");
+
+    public int getLoudness() {
         return loudness;
     }
 
+    public void setLoudness(int loudness) {
+        this.loudness = loudness;
+    }
 
+    public abstract int play();
 
+    @Override
+    public String toString() {
+        return "Instrument{" +
+                "loudness=" + loudness +
+                '}';
+    }
 }

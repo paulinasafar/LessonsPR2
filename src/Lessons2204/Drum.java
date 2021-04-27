@@ -6,8 +6,16 @@ public class Drum extends Instrument{
         super(loudness);
     }
 
+@Override
     public int play() {
-        System.out.println("Drums are hit at " );
+        System.out.println("Drums hitting " );
         return loudness;
+    }
+
+    @Override
+    public String toString() {
+        return "Drum{" +
+                "loudness=" + loudness +
+                '}';
     }
 }

@@ -6,8 +6,16 @@ public class Piano extends Instrument {
         super(loudness);
     }
 
+
     public int play() {
-        System.out.println("Piano resonating at " );
+        System.out.println("Piano resonating " );
         return loudness;
+    }
+
+    @Override
+    public String toString() {
+        return "Piano{" +
+                "loudness=" + loudness +
+                '}';
     }
 }
