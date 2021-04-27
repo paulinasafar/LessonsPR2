@@ -1,101 +1,106 @@
 package Uebungsbeispiele01;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Order {
     private int nrArticles;
     private int capacityOrder;
-    private Article[] order;
+    private ArrayList<Article> articles;
 
     public Order(int capacityOrder) {
         this.nrArticles = 0;
         this.capacityOrder = capacityOrder;
-        this.order = new Article[capacityOrder];
+        this.articles = new ArrayList<Article>(capacityOrder);
     }
 
     public int getNrArticles() {
         return nrArticles;
     }
 
-    public void setNrArticles(int nrArticles) {
-        this.nrArticles = nrArticles;
-    }
+//    public void setNrArticles(int nrArticles) {
+//        this.nrArticles = nrArticles;
+//    }
 
     public int getCapacityOrder() {
         return capacityOrder;
     }
 
-    public void setCapacityOrder(int capacityOrder) {
-        this.capacityOrder = capacityOrder;
-    }
+//    public void setCapacityOrder(int capacityOrder) {
+//        this.capacityOrder = capacityOrder;
+//    }
 
-    public Article[] getArticles() {
-        return order;
-    }
-
-    public void setArticles(Article[] articles) {
-        this.order = articles;
+    public ArrayList<Article> getArticles() {
+        return articles;
     }
 
     public void addArticle(Article a) {
-        for (int i = 0; i < order.length; i++) {
-            if (order[i] != String){
-                order[i] = a;
-            }
+            articles.add(a);
         }
-    }
 
-    public int findMostExpensiveArticle(Article[] articles) {
+    public int findMostExpensiveArticle(ArrayList<Article> articles) {
         int highestPrice = 0;
-
-        for (int i = 0; i < articles.length - 1; i++) {
-            if (articles[i].getPrice() < articles[i + 1].getPrice()) {
+        for (int i = 0; i < articles.size() - 1; i++) {
+            if (articles.get(i).getPrice() < articles.get(i+1).getPrice()) {
                 highestPrice = i + 1;
             }
         }
         return highestPrice + 1;
     }
 
-    public int findMostExpensiveOrderPosition(Article[] order) {
+    public int findMostExpensiveOrderPosition(ArrayList<Article> articles) {
         int mostExpensiveOrder = 0;
 
-        for (int i = 0; i < order.length - 1; i++) {
-            if (order[i].getPrice() * order[i].getNumber() < order[i + 1].getPrice() * order[i + 1].getNumber()) {
+        for (int i = 0; i < articles.size() - 1; i++) {
+            if (articles.get(i).getPrice() * articles.get(i).getNumber() < articles.get(i+1).getPrice() * articles.get(i+1).getNumber()) {
                 mostExpensiveOrder = i + 1;
             }
         }
         return mostExpensiveOrder + 1;
     }
 
-    public double sumOrder(Article[] order) {
+    public double sumOrder(ArrayList<Article> articles) {
         double sum = 0.0;
 
-        for (int i = 0; i < order.length; i++) {
-            sum += (order[i].getPrice() * order[i].getNumber());
+        for (int i = 0; i < articles.size(); i++) {
+            sum += (articles.get(i).getPrice() * articles.get(i).getNumber());
         }
         return sum;
     }
 
-    public double calculateTax(Article[] order){
+    public double calculateTax(ArrayList<Article> articles){
         double tax1 = 0.0;
         double totalTax = 0.0;
-        for (int i = 0; i < order.length; i++) {
-            if(order[i].getPrice() < 20) {
-                tax1 = (order[i].getPrice() * 0.05) * order[i].getNumber();
+        for (int i = 0; i < articles.size(); i++) {
+            if(articles.get(i).getPrice() < 20) {
+                //tax1= 0;
+                tax1 = (articles.get(i).getPrice() * 0.05) * articles.get(i).getNumber();
                 totalTax += tax1;
             }else {
-                tax1 = (order[i].getPrice() * 0.20) * order[i].getNumber();
+                //tax1 = 0;
+                tax1 = (articles.get(i).getPrice() * 0.20) * articles.get(i).getNumber();
                 totalTax += tax1;
             }
         }
     return totalTax;}
 
-    public double sumOrderWithTax(Article[] order) {
-        double sumOrderWithTax = sumOrder(order) + calculateTax(order);
-    return sumOrderWithTax;}
+    public double sumOrderWithTax(ArrayList<Article> articles) {
+        double sumOrderWithTax = sumOrder(articles) + calculateTax(articles);
+
+        return sumOrderWithTax;
+    }
+
+//    private void increaseArray(ArrayList<Article> articles) {
+//        articles.ensureCapacity(100);
+//    }
+//
+//    public void getIncreasedArray(ArrayList<Article> articles){
+//        increaseArray(articles);
+//    }
 
     @Override
     public String toString() {
-        return "Order: " + Arrays.toString(order);
+        return "Order:" + " Articles= " + articles;
     }
 }

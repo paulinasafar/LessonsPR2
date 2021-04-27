@@ -38,7 +38,7 @@ public class Article {
 
     @Override
     public String toString() {
-        return "Article " + name + " with number"  + number + " and price: " + price;
+        return "Article " + name + " quantity "  + number + " and unit price: " + price;
         }
 
     }
