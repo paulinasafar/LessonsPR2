@@ -44,9 +44,5 @@ public class PropertyIIApp {
             System.out.println(element.rentAirBnB(7));
         }
 
-
-
-
-
     }
 }
