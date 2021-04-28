@@ -23,5 +23,20 @@ public class EventsApp {
         events1.addEvent(eve5);
         events1.addEvent(eve6);
         events1.addEvent(eve7);
+
+        System.out.println("Average price by place: " + events1.getAvgPriceByPlace("Vienna"));
+        System.out.println();
+        System.out.println("By entry price: " + events1.getByEintrittsPreis(100, 200));
+        System.out.println();
+        System.out.println("Count events by place: " + events1.getCountEventsByPlace());
+        System.out.println();
+        System.out.println("By Title: " + events1.getByTitle("Concert"));
+        System.out.println();
+        System.out.println("By Place: " + events1.getByPlace("Vienna"));
+        System.out.println();
+        System.out.println("Most Expensive by Place: " + events1.getMostExpensiveByPlace("London"));
+        System.out.println();
+        System.out.println("Sum Price by Place: " + events1.getSumPriceEventsByPlace());
+
     }
 }

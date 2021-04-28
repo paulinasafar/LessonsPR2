@@ -1,6 +1,7 @@
 package Uebungsbeispiele03;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class EvenCalender {
@@ -18,43 +19,47 @@ public class EvenCalender {
     public Event getByTitle(String title) {
         Event byTitle = new Event("", "", 0.0);
         for (int i = 0; i < events.size(); i++) {
-            if(events.get(i).getTitle() == title) {
+            if (events.get(i).getTitle() == title) {
                 byTitle = events.get(i);
             }
         }
-    return byTitle;}
+        return byTitle;
+    }
 
     public ArrayList<Event> getByPlace(String place) {
         ArrayList<Event> newEvents = new ArrayList<Event>();
 
         for (int i = 0; i < events.size(); i++) {
-            if(events.get(i).getPlace() == place) {
+            if (events.get(i).getPlace() == place) {
                 newEvents.add(events.get(i));
             }
         }
-    return newEvents;}
+        return newEvents;
+    }
 
-    public ArrayList<Event> getByEintrittsPreis(double min, double max){
+    public ArrayList<Event> getByEintrittsPreis(double min, double max) {
         ArrayList<Event> newEvents = new ArrayList<Event>();
 
         for (int i = 0; i < events.size(); i++) {
-            if(events.get(i).getEntryPrice() >= min && events.get(i).getEntryPrice() <= max) {
+            if (events.get(i).getEntryPrice() >= min && events.get(i).getEntryPrice() <= max) {
                 newEvents.add(events.get(i));
             }
         }
-        return newEvents;}
+        return newEvents;
+    }
 
     public Event getMostExpensiveByPlace(String place) {
         Event byPrice = new Event("", "", 0.0);
 
         for (int i = 0; i < events.size(); i++) {
-            if(events.get(i).getPlace() == place) {
-                if(events.get(i).getEntryPrice() < events.get(i+1).getEntryPrice()) {
-                    byPrice = events.get(i+1);
+            if (events.get(i).getPlace().equals(place)) {
+                if (byPrice.getEntryPrice() < events.get(i).getEntryPrice()) {
+                    byPrice = events.get(i);
                 }
             }
         }
-    return byPrice;}
+        return byPrice;
+    }
 
     public double getAvgPriceByPlace(String place) {
         double sum = 0.0;
@@ -62,27 +67,32 @@ public class EvenCalender {
         int counter = 0;
 
         for (int i = 0; i < events.size(); i++) {
-            if(events.get(i).getPlace() == place) {
-              sum += events.get(i).getEntryPrice();
-              counter++;
+            if (events.get(i).getPlace() == place) {
+                sum += events.get(i).getEntryPrice();
+                counter++;
             }
         }
-    averagePrice = sum / counter;
-    return averagePrice;}
+        averagePrice = sum / counter;
+        return averagePrice;
+    }
 
     public HashMap<String, Integer> getCountEventsByPlace() {
         HashMap<String, Integer> newMap = new HashMap<>();
 
-        for (int i = 0; i < events.size(); i++) {
-            int counter = 0;
-            for (int j = i+1; j < events.size()-1; j++) {
-                if(events.get(i).getPlace() == events.get(j).getPlace()) {
-                    counter++;
-                }
-            }
+        for(Event e : events) {
+            newMap.put(e.getPlace(), newMap.getOrDefault(e.getPlace(), 0) +1);
+        }
+        return newMap;
+    }
 
+    public HashMap<String, Double> getSumPriceEventsByPlace() {
+        HashMap<String, Double> newMap = new HashMap<>();
+
+        for(Event e : events) {
+            newMap.put(e.getPlace(), newMap.getOrDefault(e.getPlace(), 0.0) + e.getEntryPrice());
         }
 
-    return newMap;}
+    return newMap;
+    }
 
 }
