@@ -1,6 +1,8 @@
 package Lesson2004;
 
-public class Holiday {
+import java.util.Comparator;
+
+public class Holiday implements Comparable<Holiday> {
 
     private String destination;
     private int lengthInDays;
@@ -18,6 +20,25 @@ public class Holiday {
         this.nrPersons = 2;
     }
 
+
+    // Länge des Urlaubs und zahl der Personen
+    @Override
+    public int compareTo(Holiday o) {
+        if (this.lengthInDays < o.lengthInDays) {
+            return -1;
+        }
+        if (this.lengthInDays > o.lengthInDays) {
+            return 1;
+        }
+        if (this.nrPersons < o.nrPersons) {
+            return -1;
+        }
+        if (this.nrPersons > o.nrPersons) {
+            return 1;
+        }
+        return 0;
+    }
+
     public String getDestination() {
         return destination;
     }
@@ -31,8 +52,9 @@ public class Holiday {
     }
 
     public void setLengthInDays(int lengthInDays) {
-        if(lengthInDays > 0) {
-        this.lengthInDays = lengthInDays; }
+        if (lengthInDays > 0) {
+            this.lengthInDays = lengthInDays;
+        }
     }
 
     public int getNrPersons() {
