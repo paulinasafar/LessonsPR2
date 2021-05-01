@@ -24,24 +24,27 @@ public class BlackJackDemo {
         System.out.println(bj);
 
         bj.addCard(player1, 8);
-        bj.addCard(player2, 11);
-        bj.addCard(player1, 2);
-        bj.addCard(player3, 10);
-        bj.addCard(player1, 7);
-        bj.addCard(player3, 10);
-        bj.addCard(player4, 7);
-        bj.addCard(player5, 6);
-        System.out.println(bj.addCard(player6, 9));
+        bj.addCard(player2, 7);
+        bj.addCard(player1, 5);
+        bj.addCard(player3, 12);
+        bj.addCard(player1, 10);
+        bj.addCard(player3, 9);
+        bj.addCard(player4, 4);
+        bj.addCard(player5, 8);
+        System.out.println(bj.addCard(player6, 3));
+        bj.addCard(player5, 10);
         bj.addCard(player5, 11);
-        bj.addCard(player5, 9);
-
-        System.out.println(bj.getPoints(player1) + player1.getName());
-        System.out.println(bj.getPoints(player2) + player2.getName());
-        System.out.println(bj.getPoints(player3) + player3.getName());
-        System.out.println(bj.getPoints(player4) + player4.getName());
-        System.out.println(bj.getPoints(player5) + player5.getName());
-        System.out.println(bj.getPoints(player6) + player6.getName());
+        System.out.println("--------------------------------------------------------");
+        System.out.println(bj.getPoints(player1) + " = " + player1.getName());
+        System.out.println(bj.getPoints(player2) + " = " + player2.getName());
+        System.out.println(bj.getPoints(player3) + " = " + player3.getName());
+        System.out.println(bj.getPoints(player4) + " = " + player4.getName());
+        System.out.println(bj.getPoints(player5) + " = " + player5.getName());
+        System.out.println(bj.getPoints(player6) + " = " + player6.getName());
         System.out.println();
+        System.out.println("----------------------------------------------------------");
+        System.out.println(bj);
+
         System.out.println("Winner is: " + bj.getWinner());
 
 
