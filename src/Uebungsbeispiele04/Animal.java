@@ -27,4 +27,13 @@ public class Animal {
         System.out.println("Makes noise");
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "color='" + color + '\'' +
+                ", countEyes=" + countEyes +
+                '}';
+    }
 }

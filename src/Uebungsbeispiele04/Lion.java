@@ -13,7 +13,12 @@ public class Lion extends Animal {
     }
     @Override
     public void makeNoise() {
+        System.out.println("Grrrrrr");
+    }
+
+    public void roar(){
         System.out.println("Rooooaaaarr");
     }
+
 
 }

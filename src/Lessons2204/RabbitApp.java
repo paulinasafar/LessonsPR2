@@ -20,6 +20,12 @@ public class RabbitApp {
         rabbit.hopp(10);
         System.out.println(rabbit);
 
+        pen.addRabbits(xmasBunny);
+        pen.addRabbits(easterBunny);
+        pen.addRabbits(rabbit);
+
+
+
 
 
 
@@ -35,6 +41,6 @@ public class RabbitApp {
         System.out.println("--------------------------------------");
         pen.hophop();
 
-
+        System.out.println(pen);
     }
 }

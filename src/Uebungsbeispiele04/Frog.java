@@ -16,4 +16,10 @@ public class Frog extends Animal {
     public void makeNoise() {
         System.out.println("Kre Kre");
     }
+
+    public void catchFly(){
+        System.out.println("Catch fly");
+    }
+
+
 }
