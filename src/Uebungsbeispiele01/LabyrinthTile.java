@@ -5,7 +5,7 @@ public class LabyrinthTile {
     private Direction entry;
     private Direction exit;
 
-    public LabyrinthTile() {
+    public LabyrinthTile(Direction entry, Direction exit) {
         this.entry = entry;
         this.exit = exit;
     }
