@@ -17,10 +17,6 @@ public class Kind {
 
     @Override
     public String toString() {
-        return "Kind{" +
-                "fname='" + fname + '\'' +
-                ", lname='" + lname + '\'' +
-                ", age=" + age +
-                '}';
+        return "Child: " + fname + " " + lname + ", has " + age;
     }
 }

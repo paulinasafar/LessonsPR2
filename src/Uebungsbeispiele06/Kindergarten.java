@@ -1,7 +1,6 @@
 package Uebungsbeispiele06;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Kindergarten {
 
@@ -23,5 +22,10 @@ public class Kindergarten {
 
     public void addKind(Kind k) {
         children.add(k);
+    }
+
+    @Override
+    public String toString() {
+        return "Kindergarten= " + klasse + " " + children;
     }
 }
