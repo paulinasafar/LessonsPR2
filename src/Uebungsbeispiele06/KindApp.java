@@ -1,6 +1,12 @@
 package Uebungsbeispiele06;
 
 
+import Lesson2004.HolidayComparator;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class KindApp {
 
     public static void main(String[] args) {
@@ -18,7 +24,15 @@ public class KindApp {
         garten1.addKind(k4);
         garten1.addKind(k5);
 
+//        List<Kind> children = new ArrayList<>();
+//        children.add(k1);
+//        children.add(k2);
+//        children.add(k3);
+//        children.add(k4);
+//        children.add(k5);
+
         System.out.println(garten1);
+//        Collections.sort(children, new AlphabeticalComparator());
 
 
         }

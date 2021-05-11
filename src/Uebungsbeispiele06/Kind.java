@@ -15,8 +15,22 @@ public class Kind {
         this.age = age;
     }
 
+    public String getFname() {
+        return fname;
+    }
+
+    public String getLname() {
+        return lname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public String toString() {
-        return "Child: " + fname + " " + lname + ", has " + age;
+        return "Child: " + fname + " " + lname + ", is " + age + " years old";
     }
-}
+
+    }
+

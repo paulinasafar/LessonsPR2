@@ -7,7 +7,7 @@ public class CrazyLabyrinthApp {
         LabyrinthTile tile1 = new LabyrinthTile(Direction.DOWN, Direction.RIGHT);
         LabyrinthTile tile2 = new LabyrinthTile(Direction.LEFT, Direction.RIGHT);
         LabyrinthTile tile3 = new LabyrinthTile(Direction.LEFT, Direction.DOWN);
-        LabyrinthTile tile4 = new LabyrinthTile(Direction.DOWN, Direction.LEFT);
+        LabyrinthTile tile4 = new LabyrinthTile(Direction.UP, Direction.LEFT);
         LabyrinthTile tile5 = new LabyrinthTile(Direction.RIGHT, Direction.UP);
 
 
@@ -20,10 +20,6 @@ public class CrazyLabyrinthApp {
 
         CrazyLabyrinth lab1 = new CrazyLabyrinth();
         System.out.println(lab1.checkPathConsistency(path1));
-
-
-
-
 
 
     }

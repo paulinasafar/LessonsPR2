@@ -4,14 +4,19 @@ public class CrazyLabyrinth {
 
 
     public boolean checkPathConsistency(LabyrinthTile[] path) {
-        boolean isPathConsistent = false;
+        boolean isPathConsistent = true;
 
         for (int i = 0; i < path.length - 1; i++) {
-            if ((path[i].getExit().toString().equals("DOWN") && path[i + 1].getEntry().toString().equals("UP")) ||
-                (path[i].getExit().toString().equals("UP") && path[i + 1].getEntry().toString().equals("DOWN")) ||
-                (path[i].getExit().toString().equals("LEFT") && path[i + 1].getEntry().toString().equals("RIGHT")) ||
-                (path[i].getExit().toString().equals("RIGHT") && path[i + 1].getEntry().toString().equals("LEFT"))) {
-                               isPathConsistent = true;
+
+            if ((path[i].getExit() == Direction.DOWN && path[i+1].getEntry() == Direction.LEFT) ||
+                (path[i].getExit() == Direction.DOWN && path[i+1].getEntry() == Direction.RIGHT) ||
+                (path[i].getExit() == Direction.UP && path[i+1].getEntry() == Direction.LEFT) ||
+                (path[i].getExit() == Direction.UP && path[i+1].getEntry() == Direction.RIGHT) ||
+                (path[i].getExit() == Direction.LEFT && path[i+1].getEntry() == Direction.UP) ||
+                (path[i].getExit() == Direction.LEFT && path[i+1].getEntry() == Direction.DOWN) ||
+                (path[i].getExit() == Direction.RIGHT && path[i+1].getEntry() == Direction.UP) ||
+                (path[i].getExit() == Direction.RIGHT && path[i+1].getEntry() == Direction.DOWN)) {
+             isPathConsistent = false;
             }
         }
         return isPathConsistent;}

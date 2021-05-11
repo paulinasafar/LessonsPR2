@@ -30,8 +30,10 @@ public class HolidayApp {
         holidays.add(holiday3);
 
         System.out.println(holidays);
-        //Collections.sort(holidays);
-        System.out.println(holidays);
+//        System.out.println();
+//        Collections.sort(holidays);
+//        System.out.println(holidays);
+        System.out.println();
         Collections.sort(holidays, new HolidayComparator());
         System.out.println(holidays);
 

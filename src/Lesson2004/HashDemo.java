@@ -11,7 +11,7 @@ public class HashDemo {
         HashSet<String> winner = new HashSet<>();
         winner.add("Heidemarie");
         winner.add("Mirjam");
-        winner.add("Paulina");
+        winner.add("Julia");
         winner.add("Magdalena");
         winner.add("Violeta");
 
