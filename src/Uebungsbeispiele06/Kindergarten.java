@@ -24,12 +24,13 @@ public class Kindergarten {
         children.add(k);
     }
 
-    public List<Kind> sortAlphabetical(List<Kind> lk) {
-        List<Kind> alphabeticalList = new ArrayList<>();
-        for(Kind k  :  lk) {
+    public void sortAlphabetical() {
+    Collections.sort(children, new AlphabeticalComparator());
+    }
 
-        }
-    return alphabeticalList;}
+    public void sortAge() {
+        Collections.sort(children, new AgeComparator());
+    }
 
     @Override
     public String toString() {

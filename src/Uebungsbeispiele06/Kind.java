@@ -29,8 +29,7 @@ public class Kind {
 
     @Override
     public String toString() {
-        return "Child: " + fname + " " + lname + ", is " + age + " years old";
+        return "Child: " + fname + " " + lname + " is " + age + " years old";
     }
-
     }
 
