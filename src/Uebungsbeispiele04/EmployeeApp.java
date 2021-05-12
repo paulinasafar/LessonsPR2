@@ -36,8 +36,6 @@ public class EmployeeApp {
         System.out.println();
         System.out.println(employees1.getSalaryByDepartment());
 
-
-
     }
 
 }
