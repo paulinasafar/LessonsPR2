@@ -28,10 +28,10 @@ public abstract class Duck implements Comparable<Duck> {
     @Override
     public int compareTo(Duck d) {
 
-       if(this.getFullWeight() < d.getWeight()) {
+       if(this.getFullWeight() < d.getFullWeight()) {
            return -1;
             }
-       if(this.getFullWeight() > d.getWeight()) {
+       if(this.getFullWeight() > d.getFullWeight()) {
            return 1;
         }
        return 0;

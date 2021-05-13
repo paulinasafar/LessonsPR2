@@ -18,12 +18,13 @@ public class SwimmingDuck extends Duck {
 
     @Override
     public String makeNoise() {
-        return null;
+        return "I am swimming!";
     }
+
 
     @Override
     public String toString() {
-        return "SwimmingDuck = " + getFullWeight();
+        return getName() + " " +  getFullWeight();
     }
 
 

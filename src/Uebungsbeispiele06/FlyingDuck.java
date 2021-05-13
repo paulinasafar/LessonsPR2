@@ -18,12 +18,14 @@ public class FlyingDuck extends Duck {
 
     @Override
     public String makeNoise() {
-        return null;
+        return "I am flying!";
     }
+
+
 
     @Override
     public String toString() {
-        return "FlyingDuck = " + getFullWeight();
+        return getName() + " " + getFullWeight();
     }
 
 
